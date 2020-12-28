@@ -1,3 +1,5 @@
+//一个简单的输入输出程序
+
 #include <stdio.h>
 
 int main()

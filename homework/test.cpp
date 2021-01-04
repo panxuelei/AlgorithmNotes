@@ -1,9 +1,18 @@
+
 #include <stdio.h>
-
-int main(int argc, char const *argv[])
+#include <math.h>
+int main()
 {
-    int n=0,sum=0,num;
-    scanf("%d",&num);
-
+    int sign = 1;
+    double PI = 0.0, n = 1.0, term = 1.0;
+    while (fabs(term) >= 1e-6)
+    {
+        PI = PI + term;
+        n = n + 2;
+        sign = -sign;
+        term = sign / n;
+    }
+    PI = PI * 4;
+    printf("PI=%10.8f\n", PI);
     return 0;
 }
